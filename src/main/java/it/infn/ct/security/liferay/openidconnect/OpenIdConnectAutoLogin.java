@@ -93,8 +93,8 @@ public class OpenIdConnectAutoLogin implements AutoLogin{
                     UserInfo userInfo = null;
                     try {
                         userInfo = authZ.getUserInfo(request);
-                        if(!(userInfo.getStringListClaim("edu_person_entitlements").contains("urn:mace:egi.eu:aai.egi.eu:member@vo.access.egi.eu") &&
-                                userInfo.getStringListClaim("edu_person_entitlements").contains("urn:mace:egi.eu:aai.egi.eu:vm_operator@vo.access.egi.eu"))) {
+                        if(!(userInfo.getStringListClaim("eduperson_entitlement").contains("urn:mace:egi.eu:aai.egi.eu:member@vo.access.egi.eu") &&
+                                userInfo.getStringListClaim("eduperson_entitlement").contains("urn:mace:egi.eu:aai.egi.eu:vm_operator@vo.access.egi.eu"))) {
                             try {
                                 response.sendRedirect("/not_authorised");
                                 return null;

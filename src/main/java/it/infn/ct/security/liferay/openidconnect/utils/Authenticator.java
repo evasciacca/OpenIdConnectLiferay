@@ -162,7 +162,7 @@ public class Authenticator {
         AuthenticationRequest req = new AuthenticationRequest(
                 oauthS,
                 new ResponseType(ResponseType.Value.CODE),
-                Scope.parse("profile openid email"),
+                Scope.parse("profile openid email refeds_edu"),
                 authC.getClientID(),
                 callback,
                 state,
